@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Guess The Word",
+    "slug": "guess-the-word",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/guess-the-word_2.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devpmc1.guesstheword",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "flavorDimensions": "store",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/guess-the-word_2.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.devpmc1.guesstheword",
+      "permissions": [],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.devpmc1.guesstheword"
+    },
+    "web": {
+      "favicon": "./assets/guess-the-word_2.png"
+    },
+    "jsEngine": "jsc",
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f3800f4c-5c9b-476c-8612-cc11e5b38cb6"
+      }
+    }
+  }
+}
