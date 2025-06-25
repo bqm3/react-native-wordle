@@ -93,8 +93,21 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.1"
+        missingDimensionStrategy 'store', 'play'
     }
+
+    flavorDimensions "appstore"
+    productFlavors{
+          googlePlay{
+              dimension "appstore"
+              missingDimensionStrategy "store", "play"
+          }
+          amazon{
+              dimension "appstore"
+              missingDimensionStrategy "store", "amazon"
+          }
+      }
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
@@ -103,17 +116,6 @@ android {
             keyPassword 'android'
         }
     }
-
-    flavorDimensions "store"
-
-  productFlavors {
-    amazon {
-      dimension "store"
-    }
-    play {
-      dimension "store"
-    }
-  }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug

@@ -29,14 +29,21 @@
       },
       "package": "com.devpmc1.guesstheword",
       "permissions": [],
-      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.devpmc1.guesstheword"
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.devpmc1.guesstheword",
+      "runtimeVersion": "1.0.1"
     },
     "web": {
       "favicon": "./assets/guess-the-word_2.png"
     },
     "jsEngine": "jsc",
     "plugins": [
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "react-native-iap",
+        {
+          "store": "play"
+        }
+      ]
     ],
     "extra": {
       "eas": {
